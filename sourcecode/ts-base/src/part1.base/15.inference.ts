@@ -1,19 +1,22 @@
-let a = 1;
-let b = [1, null, 'a']
-let c = {x: 1, y: 'a'}
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+let a1 = 1;
+let b1 = [1, null, "a"];
+let c1 = { x: 1, y: "a" };
 
-let d = (x = 1) => x + 1
+let d = (x = 1) => x + 1;
 
-window.onkeydown = (event) => {
-    // console.log(event.button)
-}
+window.onkeydown = (event: any) => {
+    console.log(event.code);
+};
 
 interface Foo {
-    bar: number
+    bar: number;
 }
-// let foo = {} as Foo
-// let foo = <Foo>{}
-let foo: Foo = {
-    bar: 1
-}
-// foo.bar = 1
+// let foo1 = {} as Foo;
+// let foo2 = <Foo>{}
+let foo3: Foo = {
+    bar: 1,
+};
+foo3.bar = 4;
+
+console.log(foo3);

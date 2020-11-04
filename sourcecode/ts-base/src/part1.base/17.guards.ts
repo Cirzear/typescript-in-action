@@ -1,26 +1,32 @@
-enum Type { Strong, Week }
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/no-parameter-properties */
+/* eslint-disable @typescript-eslint/explicit-member-accessibility */
+enum Type {
+    Strong,
+    Week,
+}
 
 class Java {
     helloJava() {
-        console.log('Hello Java')
+        console.log("Hello Java");
     }
-    java: any
+    java: any;
 }
 
 class JavaScript {
     helloJavaScript() {
-        console.log('Hello JavaScript')
+        console.log("Hello JavaScript");
     }
-    js: any
+    js: any;
 }
 
 function isJava(lang: Java | JavaScript): lang is Java {
-    return (lang as Java).helloJava !== undefined
+    return (lang as Java).helloJava !== undefined;
 }
 
 function getLanguage(type: Type, x: string | number) {
     let lang = type === Type.Strong ? new Java() : new JavaScript();
-    
+
     if (isJava(lang)) {
         lang.helloJava();
     } else {
@@ -41,11 +47,11 @@ function getLanguage(type: Type, x: string | number) {
     //     lang.helloJavaScript()
     // }
 
-    // in
-    // if ('java' in lang) {
-    //     lang.helloJava()
+    // // in
+    // if ("js" in lang) {
+    //     lang.helloJavaScript();
     // } else {
-    //     lang.helloJavaScript()
+    //     lang.helloJava();
     // }
 
     // typeof
@@ -58,4 +64,4 @@ function getLanguage(type: Type, x: string | number) {
     return lang;
 }
 
-getLanguage(Type.Week, 1)
+getLanguage(Type.Week, 1);
