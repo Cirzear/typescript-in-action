@@ -5,8 +5,8 @@ namespace Shape {
     }
 }
 
-console.log(Shape.cricle(2))
-console.log(Shape.square(2))
+console.log(Shape.cricle(1))
+console.log(Shape.square(1))
 
 import cricle = Shape.cricle
 console.log(cricle(2))

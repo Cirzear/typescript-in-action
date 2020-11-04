@@ -7,10 +7,13 @@ import myFunction from './a';  // 不加{}，导入默认
 console.log(a, b, c)
 
 let p: P = {
-    x: 1,
-    y: 1
+    x: 2,
+    y: 2
 }
 
-console.log(All)
+
+console.log(F)
+console.log(p)
+// console.log(All)
 
 myFunction()

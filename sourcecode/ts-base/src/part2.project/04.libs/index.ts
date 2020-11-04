@@ -2,8 +2,8 @@ import $ from 'jquery'
 
 $('.app').css('color', 'red')
 
-globalLib({x: 1})
-globalLib.doSomething()
+// globalLib({x: 1})
+// globalLib.doSomething()
 
 import moduleLib from './module-lib'
 moduleLib({y: 2})
@@ -20,9 +20,9 @@ declare module 'moment' {
 m.myFunction = () => {}
 
 // 全局插件
-declare global {
-    namespace globalLib {
-        function doAnyting(): void
-    }
-}
-globalLib.doAnyting = () => {}
+// declare global {
+//     namespace globalLib {
+//         function doAnyting(): void
+//     }
+// }
+// globalLib.doAnyting = () => {}
