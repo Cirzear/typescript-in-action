@@ -31,7 +31,7 @@ const App = ({ match }: any) => {
           <Route path="/setting" component={Setting} />
         </div>
       </Content>
-      <Footer className="footer">TypeScript in Action</Footer>
+      <Footer className="footer">TypeScript in React</Footer>
     </Layout>
   </ConfigProvider>
 }
