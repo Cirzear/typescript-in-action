@@ -1,12 +1,12 @@
-import originAxios from 'axios';
-import { message } from 'antd';
+import originAxios from "axios";
+import { message } from "antd";
 
 const axios = originAxios.create({
-    timeout: 20000
+    timeout: 20000,
 });
 
 axios.interceptors.response.use(
-    function(response) {
+    function (response) {
         if (response.data && response.data.flag === 1) {
             /*
                 successful response:
@@ -21,24 +21,24 @@ axios.interceptors.response.use(
         }
         return response.data;
     },
-    function(error) {
+    function (error) {
         return Promise.reject(error);
     }
 );
 
 export function get(url: string, data: any) {
     return axios.get(url, {
-        params: data
+        params: data,
     });
-};
+}
 
 // By default, axios serializes JavaScript objects to JSON.
 export function post(url: string, data: any) {
     return axios({
-        method: 'post',
+        method: "post",
         url,
-        data
+        data,
     });
-};
+}
 
 export default axios;

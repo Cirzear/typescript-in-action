@@ -9,4 +9,4 @@ TypeScript error in /jenkins/workspace/project/front/node_modules/jest-diff/buil
 [INFO] '=' expected.  TS1005
 ```
 
-解决方法： 升级 typeScript 版本到 3.8.0 及以上
+解决方法： 升级 typeScript 版本到 3.8.0 或更高版本
